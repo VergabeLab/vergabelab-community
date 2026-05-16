@@ -85,6 +85,15 @@ Kurze Handreichungen, wie die Bausteine
   - in selbst gehosteten LLM-Setups
 eingebunden werden können.
 
+- **Software-Tools, Skripte und Automatisierung (perspektivisch)**  
+  Künftig können auch echte Software- und Tooling-Bestandteile hinzukommen, etwa
+  - kleine Hilfsskripte,
+  - Prüf- oder Konvertierungswerkzeuge,
+  - Integrationsbeispiele,
+  - Automatisierungshilfen für wiederkehrende Arbeitsschritte.
+
+  Solche Bestandteile werden getrennt von Textartefakten geführt (z. B. in `tooling/`) und gesondert lizenziert (EUPL 1.2).
+
 ---
 
 ## 2. Quickstart: So nutzt du den ersten Prompt
