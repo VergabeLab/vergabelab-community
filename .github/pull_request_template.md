@@ -15,11 +15,13 @@ Insbesondere bestätigst du:
 - Dein Beitrag enthält keine personenbezogenen Daten, keine Details laufender Vergaben und keine Betriebs- oder Geschäftsgeheimnisse.
 - Deine Commits sind per DCO signiert (`Signed-off-by`).
 
-Bitte hake die folgenden Punkte zusätzlich bewusst ab (ein `x` in die Klammern setzen, z. B. `[x]`:
+Bitte hake die folgenden Punkte zusätzlich bewusst ab (ein `x` in die Klammern setzen, z. B. `[x]`):
 
 - [ ] Ich habe **keine** personenbezogenen Daten, keine Details laufender Vergaben und keine Betriebs-/Geschäftsgeheimnisse eingefügt.
 - [ ] Ich akzeptiere das Prinzip **„Inbound = Outbound“**: Mein Beitrag wird unter der Lizenz des betroffenen Ordners bzw. der betroffenen Datei veröffentlicht.
-- [ ] Alle meine Commits sind per DCO signiert (`Signed-off-by`). *Hinweis: Unser DCO-Check prüft dies automatisch.*
+- [ ] Alle meine Commits sind per DCO signiert (`Signed-off-by`).
+
+> **Hinweis:** Der GitHub-Workflow prüft die `Signed-off-by`-Trailer in den Commit-Nachrichten. Die Checkboxen selbst werden nicht technisch ausgewertet; sie dienen der zusätzlichen Sensibilisierung für die oben genannten Punkte.
 
 ---
 
