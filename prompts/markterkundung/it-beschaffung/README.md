@@ -47,19 +47,53 @@ Die Bausteine dienen der Strukturierung und Qualitätssicherung. Sie ersetzen ke
 
 Weitere Varianten, etwa für Claude Projects oder andere KI-Systeme, können später ergänzt werden.
 
+### Ergänzende Bausteine
+
+Der Systemprompt ist für die gemeinsame Nutzung mit den folgenden VergabeLab-Bausteinen ausgelegt:
+
+| Baustein                                                                                                                 | Funktion                                                                                                 |
+| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------- |
+| [Leitfaden Markterkundung](../../../wissen/markterkundung/01_leitfaden_markterkundung_de.md)                             | Fachliche und methodische Grundlage für Planung, Durchführung, Auswertung und Dokumentation              |
+| [Typische Fehler bei Markterkundungen](../../../wissen/markterkundung/02_typische_fehler_markterkundung_de.md)           | Prüf- und Risikobaustein, insbesondere zu Wettbewerb, Vorbefassung, Gleichbehandlung und Vertraulichkeit |
+| [Anschreiben und Fragenkatalog](../../../templates/markterkundung/it-beschaffung/01_anschreiben_und_fragenkatalog_de.md) | Bearbeitbare Vorlage für die Kommunikation mit Marktteilnehmern                                          |
+
+Bei der Einrichtung eines Custom GPT sollten diese Dateien zusätzlich als Wissensdateien hochgeladen werden.
+
+
 ---
 
 ## Schnellstart
 
-1. Öffne die Datei `01_hinweistext_systemprompt_markterkundung_chatgpt_customgpt_de.md`.
+Für die Einrichtung werden zwei Arten von Bausteinen verwendet:
+
+* Der **Systemprompt** bestimmt Rolle, Arbeitsweise und Grenzen des Assistenten.
+* Die **Wissens- und Template-Dateien** stellen die fachlichen VergabeLab-Inhalte bereit.
+
+Für eine möglichst zuverlässige und konsistente Arbeitsweise sollten beide Bestandteile eingerichtet werden.
+
+1. Öffne die Datei [`01_hinweistext_systemprompt_markterkundung_chatgpt_customgpt_de.md`](./01_hinweistext_systemprompt_markterkundung_chatgpt_customgpt_de.md).
+
 2. Kopiere nur den Abschnitt zwischen **„KOPIERBEREICH START“** und **„KOPIERBEREICH ENDE“**.
-3. Füge den kopierten Text in das Feld **„Hinweise“** bzw. **„Instructions“** deines Custom GPT ein.
-4. Ergänze bei Bedarf projektspezifische Rahmenbedingungen, etwa Bundesland, interne Vorgaben, Verwaltungsvorschriften oder besondere IT-/Sicherheitsanforderungen.
-5. Teste den Assistenten mit einem einfachen Einstieg, zum Beispiel:
+
+3. Füge den kopierten Text in das Feld **„Hinweise“** beziehungsweise **„Instructions“** deines Custom GPT ein.
+
+4. Lade zusätzlich folgende Dateien im ursprünglichen Markdown-Format (`.md`) herunter:
+
+   * [`01_leitfaden_markterkundung_de.md`](../../../wissen/markterkundung/01_leitfaden_markterkundung_de.md)
+   * [`02_typische_fehler_markterkundung_de.md`](../../../wissen/markterkundung/02_typische_fehler_markterkundung_de.md)
+   * [`01_anschreiben_und_fragenkatalog_de.md`](../../../templates/markterkundung/it-beschaffung/01_anschreiben_und_fragenkatalog_de.md)
+
+5. Lade diese drei Dateien im GPT-Editor unter **„Wissen“** beziehungsweise **„Knowledge“** hoch.
+
+6. Ergänze bei Bedarf projektspezifische Rahmenbedingungen, etwa Bundesland, interne Vorgaben, Verwaltungsvorschriften oder besondere IT- und Sicherheitsanforderungen.
+
+7. Teste den Assistenten anschließend in der Vorschau, zum Beispiel mit:
 
 ```text
 Wir planen die Beschaffung einer Softwarelösung und möchten vorab eine Markterkundung durchführen. Bitte stelle mir die erforderlichen Rückfragen.
 ```
+
+> **Hinweis:** Der Systemprompt kann auch allein verwendet werden. Ohne die ergänzenden Wissens- und Template-Dateien greift der Assistent jedoch stärker auf sein allgemeines Modellwissen zurück und kann die VergabeLab-Bausteine nicht gezielt berücksichtigen.
 
 ---
 
