@@ -116,8 +116,8 @@ eingebunden werden können.
 4.  Füge den kopierten Text in das Feld **"Hinweise"** ein.
 5.  Ergänze Name (z. B. "Vergabe-Assistent") und Beschreibung.
 
-- **IV. Kontext hinzufügen (Optional)**  
-Ergänze bei Bedarf projektspezifische Parameter (z. B. Bundesland, Behörde/Organisationseinheit) direkt im Anweisungsfeld oder lade Dokumente (z. B. TVgG, Verwaltungsvorschriften) als **"Wissen"** (Knowledge) hoch.
+- **IV. Kontext und Wissen hinzufügen (optional, aber wichtig)**  
+Ergänze bei Bedarf projektspezifische Parameter (z. B. Bundesland, Behörde/Organisationseinheit) direkt im Anweisungsfeld und/oder lade Dokumente (z. B. Landesvergabegesetze, VergabeLab KI-Bausteine aus [`wissen/markterkundung`](wissen/markterkundung) und [`templates/markterkundung/it-beschaffung`](templates/markterkundung/it-beschaffung) ) als **"Wissen"** (Knowledge) hoch.
 
 - **V. Testen**  
 Klicke oben rechts auf "Erstellen" (oder "Update") und teste den Assistenten mit einer typischen Frage.
