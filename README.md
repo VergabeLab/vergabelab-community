@@ -1,6 +1,7 @@
 ---
 title: "VergabeLab Community"
-version: "0.1.0"
+version: "0.2.0"
+last_reviewed: "2026-06-07"
 status: "initial"
 language: "de-DE"
 type: "root-readme"
@@ -13,6 +14,8 @@ topics:
   - "KI-Bausteine"
   - "Vergabewesen"
   - "Wissen"
+  - "Evaluation"
+  - "Testakten"
   - "Netzwerk"
   - "Open Knowledge"
   - "Open Source"
@@ -26,21 +29,26 @@ SPDX-License-Identifier: CC-BY-4.0
 <img width="1200" height="410" alt="VergabeLab-Community" src="https://github.com/user-attachments/assets/1a2a22a4-b393-4b9e-9e3a-655342ba0a44" />
 
 ---
-
 # VergabeLab Community - Freie KI-Bausteine für Vergabestellen
 
-Dieses Repository sammelt **offene KI-Bausteine** – insbesondere Konfigurationstexte (Systemprompts, Hinweistexte) für **OpenAI Custom GPTs**, **Claude Projects** sowie weitere „Expertensysteme“, daneben **Textmuster, Leitfäden und Wissensbausteine** – für typische Aufgaben im öffentlichen Beschaffungswesen: von der **Markterkundung** über **Leistungsbeschreibungen** bis hin zu **Vertragsgestaltung**, **Wertung** und **Zuschlag**.
+Dieses Repository sammelt **offene KI-Bausteine für das öffentliche Beschaffungswesen** – insbesondere Systemprompts und Konfigurationstexte, fachliche Wissensbausteine, Templates, Leitfäden sowie plattformneutrale Testakten und Evaluationsmaterialien. Die Bausteine können unter anderem in **ChatGPT Custom GPTs**, **Claude Projects und Skills** sowie anderen LLM-basierten Assistenzsystemen eingesetzt werden.
 
-Ziel von VergabeLab Community ist es, **Erfahrungswissen aus der Praxis** in wiederverwendbare Bausteine zu überführen und Vergabestellen bei der **sicheren und verantwortungsvollen Nutzung von KI** in Vergabeprozessen zu unterstützen.
+Inhaltlich reicht das Repository von der **Markterkundung** über **Leistungsbeschreibungen** bis hin zu **Vertragsgestaltung**, **Wertung**, **Dokumentation** und **Qualitätssicherung KI-gestützter Arbeitsabläufe**.
+
+Ziel von VergabeLab Community ist es, **Erfahrungswissen aus der Praxis** in nachvollziehbare und wiederverwendbare Bausteine zu überführen und Vergabestellen bei der **sicheren und verantwortungsvollen Nutzung von KI** in Vergabeprozessen zu unterstützen.
 
 **Was bringt das in der Vergabepraxis?**
-- **Struktur und Tempo**: schneller vom „leeren Blatt“ zu belastbaren Entwürfen (Markterkundung → LB → Wertung).
-- **Qualitätssicherung**: weniger Lücken/Widersprüche, konsistentere Anforderungen und Kriterien.
-- **Bessere Dokumentation**: nachvollziehbare Begründungsbausteine (ohne Automatisierung der Entscheidung).
 
-Der Fokus liegt ausdrücklich auf **Unterstützung**, nicht auf Vollautomatisierung von Vergabeentscheidungen. Verantwortlich für die Inhalte und Entscheidungen bleibt immer der Mensch.
+* **Struktur und Tempo:** schneller vom „leeren Blatt“ zu belastbaren Entwürfen.
+* **Qualitätssicherung:** weniger Lücken und Widersprüche, konsistentere Anforderungen und Kriterien.
+* **Bessere Dokumentation:** nachvollziehbare Begründungs- und Dokumentationsbausteine.
+* **Vergleichbare Tests:** fiktive Testakten und Bewertungsmaßstäbe für die strukturierte Prüfung unterschiedlicher KI-Systeme und Konfigurationen.
 
-**Abgrenzung:** VergabeLab Community ist die Open-Knowledge- und Open-Source-Ebene dieses Projekts. Separate kommerzielle Angebote (z. B. Integrations-/Update-Services oder Partner-Module) sind nicht Bestandteil dieses Repositorys und werden getrennt dokumentiert und vertraglich geregelt.
+Der Fokus liegt ausdrücklich auf **Unterstützung**, nicht auf der Vollautomatisierung von Vergabeentscheidungen. Die Verantwortung für den konkreten Einsatz, die fachliche Prüfung und die daraus folgenden Entscheidungen bleibt beim Menschen.
+
+> **Hinweis zur Nutzung:** Die Bausteine werden mit fachlicher Sorgfalt erstellt und vor ihrer Veröffentlichung geprüft. Diese Prüfung ist jedoch keine Zusicherung, dass ein Baustein für jeden Einzelfall vollständig, aktuell oder geeignet ist. Die Inhalte ersetzen weder die Prüfung des konkreten Beschaffungsvorgangs noch eine Rechtsberatung im Einzelfall. Bei KI-gestützter Nutzung können Ergebnisse zudem je nach Modell, Version, Konfiguration und Eingaben abweichen. Nutzung und Anpassung erfolgen daher in eigener Verantwortung. Es gelten die Gewährleistungs- und Haftungsregelungen der jeweils ausgewiesenen Lizenz; zwingende gesetzliche Haftung bleibt unberührt.
+
+**Abgrenzung:** VergabeLab Community ist die Open-Knowledge- und Open-Source-Ebene dieses Projekts. Separate kommerzielle Angebote, etwa individuelle Anpassungen, Integrationsleistungen, Schulungen, Support oder Partner-Module, sind nicht Bestandteil dieses Repositorys und werden getrennt dokumentiert und vertraglich geregelt.
 
 **Lizenzierung (Zusammenfassung):**  
 - Alle **Textartefakte** in diesem Repository (Systemprompts/Hinweistexte, Templates, Guides, Muster, Wissensbausteine) stehen – soweit nicht in der Datei selbst anders gekennzeichnet – unter **CC BY 4.0** (Attribution, geringe Nutzungshürden).
@@ -86,6 +94,18 @@ Kurze Handreichungen, wie die Bausteine
   - in selbst gehosteten LLM-Setups
 eingebunden werden können.
 
+* **Testakten und Evaluation**
+  Unter [`evals/`](/evals/) entstehen plattformneutrale Testfälle, mit denen unterschiedliche KI-Assistenten, Prompts und Skills unter vergleichbaren Bedingungen geprüft werden können. Dazu gehören insbesondere
+
+  * vollständig fiktive Input-Akten,
+  * standardisierte Testprompts,
+  * Erwartungshorizonte und Goldstandard-Outputschemata,
+  * Scoring Rubrics und Auswertungshinweise,
+  * Ergebnisordner für dokumentierte Testläufe.
+
+  Der erste vollständige Evaluationsfall ist die [Testakte M-IT-01 zur Markterkundung bei einer IT-Beschaffung](/evals/markterkundung/it-beschaffung/M-IT-01/).
+
+
 - **Software-Tools, Skripte und Automatisierung (perspektivisch)**  
   Künftig können auch echte Software- und Tooling-Bestandteile hinzukommen, etwa
   - kleine Hilfsskripte,
@@ -97,96 +117,156 @@ eingebunden werden können.
 
 ---
 
-## 2. Quickstart: So nutzt du den ersten Prompt
+## 2. Quickstart: So nutzt und testest du das erste Modul
 
-> Wenn du es bis hierhin geschafft hast, bist du bereit, dein erstes KI-Expertensystem (Custom GPT & Co.) zu erstellen.
+> Für eine möglichst zuverlässige Arbeitsweise sollte nicht nur der Systemprompt eingerichtet werden. Zum Modul gehören auch fachliche Wissensbausteine, Templates und Testmaterialien.
 
-**Beispiel: Markterkundungs-GPT (Systemprompt/Hinweistext)**
+**Beispiel: Markterkundung bei IT-Beschaffungen**
 
-- **I. Datei wählen**  
-Öffne den Ordner [`prompts/markterkundung/it-beschaffung`](./prompts/markterkundung/it-beschaffung)
+### I. Systemprompt auswählen
 
-- **II. Inhalt kopieren**  
-Öffne die Datei `01_hinweistext_systemprompt_markterkundung_chatgpt_customgpt_de.md` und kopiere nur den Abschnitt zwischen **„KOPIERBEREICH START“** und **„KOPIERBEREICH ENDE“** in die Zwischenablage.
+Öffne den Ordner [`prompts/markterkundung/it-beschaffung`](/prompts/markterkundung/it-beschaffung/) und anschließend die Datei [`01_hinweistext_systemprompt_markterkundung_chatgpt_customgpt_de.md`](/prompts/markterkundung/it-beschaffung/01_hinweistext_systemprompt_markterkundung_chatgpt_customgpt_de.md).
 
-- **III. GPT konfigurieren (am Beispiel ChatGPT)**  
-1.  Gehe zu **[chatgpt.com/gpts](https://chatgpt.com/gpts)** (oder klicke links auf "GPTs erkunden").
-2.  Klicke oben rechts auf **"+ Erstellen"**.
-3.  Wähle im Editor oben links den Reiter **"Konfigurieren"**.
-4.  Füge den kopierten Text in das Feld **"Hinweise"** ein.
-5.  Ergänze Name (z. B. "Vergabe-Assistent") und Beschreibung.
+Kopiere nur den Abschnitt zwischen **„KOPIERBEREICH START“** und **„KOPIERBEREICH ENDE“**.
 
-- **IV. Kontext und Wissen hinzufügen (optional, aber wichtig)**  
-Ergänze bei Bedarf projektspezifische Parameter (z. B. Bundesland, Behörde/Organisationseinheit) direkt im Anweisungsfeld und/oder lade Dokumente (z. B. Landesvergabegesetze, VergabeLab KI-Bausteine aus [`wissen/markterkundung`](wissen/markterkundung) und [`templates/markterkundung/it-beschaffung`](templates/markterkundung/it-beschaffung) ) als **"Wissen"** (Knowledge) hoch.
+### II. KI-Assistent konfigurieren
 
-- **V. Testen**  
-Klicke oben rechts auf "Erstellen" (oder "Update") und teste den Assistenten mit einer typischen Frage.
+Füge den kopierten Text in das Anweisungs- beziehungsweise Systemprompt-Feld des verwendeten KI-Systems ein.
 
-> **Community-Tipp:** VergabeLab-Bausteine sind bewusst so angelegt, dass sie **angepasst und verbessert** werden. Wenn du Änderungen vornimmst, freuen wir uns, wenn du sie – im Sinne der Community – wieder teilst (z. B. per Issue oder Pull Request).
+Bei einem ChatGPT Custom GPT ist dies das Feld **„Hinweise“** beziehungsweise **„Instructions“**. Ergänze anschließend Name und Beschreibung des Assistenten.
+
+### III. VergabeLab-Wissen und Template hinzufügen
+
+Für die fachliche Unterfütterung sollten zusätzlich folgende Dateien im ursprünglichen Markdown-Format (`.md`) heruntergeladen und als Wissensdateien bereitgestellt werden:
+
+* [`01_leitfaden_markterkundung_de.md`](/wissen/markterkundung/01_leitfaden_markterkundung_de.md)
+* [`02_typische_fehler_markterkundung_de.md`](/wissen/markterkundung/02_typische_fehler_markterkundung_de.md)
+* [`01_anschreiben_und_fragenkatalog_de.md`](/templates/markterkundung/it-beschaffung/01_anschreiben_und_fragenkatalog_de.md)
+
+Der Systemprompt steuert Rolle und Arbeitsweise des Assistenten. Die Wissens- und Template-Dateien stellen die fachlichen VergabeLab-Inhalte und unmittelbar nutzbare Arbeitshilfen bereit.
+
+### IV. Eigenen Kontext ergänzen
+
+Ergänze bei Bedarf projektspezifische Rahmenbedingungen, etwa:
+
+* Bundesland und anwendbare Verwaltungsvorschriften,
+* Auftraggeber und Organisationseinheit,
+* Beschaffungsgegenstand,
+* interne IT- und Sicherheitsvorgaben,
+* Datenschutzanforderungen,
+* vorhandene Systeme und Schnittstellen.
+
+Bitte keine personenbezogenen Daten, Betriebs- und Geschäftsgeheimnisse oder vertraulichen Informationen aus laufenden Vergabeverfahren in hierfür nicht freigegebene KI-Systeme eingeben.
+
+### V. Assistent testen
+
+Für einen einfachen Funktionstest kann beispielsweise folgende Eingabe verwendet werden:
+
+```text
+Wir planen die Beschaffung einer Softwarelösung und möchten vorab eine Markterkundung durchführen. Bitte stelle mir die erforderlichen Rückfragen.
+```
+
+Für einen strukturierten Vergleich steht zusätzlich die [Testakte M-IT-01](/evals/markterkundung/it-beschaffung/M-IT-01/) bereit.
+
+Dabei gilt für Blindtests:
+
+* Vorbereitung der Markterkundung: nur [Aktenstücke 01–05](/evals/markterkundung/it-beschaffung/M-IT-01/input/) verwenden;
+* Auswertung der Marktrückläufe: [Aktenstücke 01–09](/evals/markterkundung/it-beschaffung/M-IT-01/input/) verwenden;
+* [Aktenstücke 10–13](/evals/markterkundung/it-beschaffung/M-IT-01/expected/) nicht in den getesteten Assistenten laden, da sie Erwartungshorizont und Bewertungsmaßstab enthalten.
+
+> **Community-Tipp:** VergabeLab-Bausteine sind bewusst so angelegt, dass sie angepasst, geprüft und verbessert werden können. Wenn du Änderungen oder Testergebnisse teilst, profitieren auch andere Nutzerinnen und Nutzer davon.
 
 ---
 
 ## 3. Struktur dieses Repositorys
-Dieses Repository ist bewusst in vier Bereiche getrennt. Ziel ist eine klare Trennung zwischen (1) Modell-Steuerung, (2) fachlicher Wissensbasis, (3) wiederverwendbaren Output-Artefakten und (4) Nutzungs-/Integrationsanleitungen.
 
-- **prompts/**
-Systemprompts und Hinweis-/Konfigurationstexte zur Steuerung von LLMs (z. B. ChatGPT Custom GPTs, Claude Projects). Enthält modulbezogene Prompt-Dateien und jeweils ein README pro Modul.
+Dieses Repository trennt fünf inhaltliche Ebenen:
 
-- **wissen/**
-Fachliche Wissensbasis und Referenzmaterial (Leitfäden, Grundlagen, Begriffsdefinitionen, Fallstricke) zur inhaltlichen Unterfütterung der Module und als Wissens-Upload für LLMs.  
-Wichtig: Keine Systemprompts und keine ausfüllbaren Mustertexte/Templates.
+1. Modellsteuerung,
+2. fachliches Wissen,
+3. wiederverwendbare Arbeitsmittel,
+4. Nutzungs- und Integrationsanleitungen,
+5. Evaluation und Qualitätssicherung.
 
-- **templates/**
-Wiederverwendbare Muster und Arbeitsmittel für die Praxis (z. B. Gliederungen, Checklisten, Matrizen, Musteranschreiben, Textbausteine). Fokus: „Copy/Paste“ bzw. unmittelbar einsetzbare Artefakte.
+Software- und Tooling-Bestandteile werden, sobald sie hinzukommen, getrennt von den Textartefakten geführt.
 
-- **guides/**
-Anleitungen zur Nutzung und Einbindung (z. B. Nutzung von GitHub, Einrichtung/Einbindung in Custom GPTs, Arbeitsabläufe, Handling-Hinweise, Best Practices). Fokus: „So nutzt du die Bausteine sicher und konsistent“.
+- **[`prompts/`](/prompts/)**  
+  Systemprompts sowie Hinweis- und Konfigurationstexte zur Steuerung von LLM-basierten Assistenzsystemen. Die Dateien bestimmen insbesondere Rolle, Arbeitsweise, Grenzen und Ausgabeformate eines Assistenten.
 
-- **LICENSES/**
-Lizenztexte und Referenzen. Maßgeblich sind die Lizenzhinweise in den jeweiligen Dateien, insbesondere YAML-Frontmatter und SPDX-Kommentar.
+- **[`wissen/`](/wissen/)**  
+  Fachliche Wissensbasis und Referenzmaterialien, etwa Leitfäden, Grundlagen, Begriffsdefinitionen und typische Fehler. Diese Dateien können auch als Wissensdateien in KI-Systeme eingebunden werden.
 
-> Hinweis: Markdown-Dateien sollen am Anfang ein YAML-Frontmatter mit Metadaten und anschließend einen SPDX-Kommentar enthalten. Dadurch bleiben Lizenzzuordnung, Rechtekette und fachliche Einordnung auch bei Kopie/Weitergabe nachvollziehbar.
+- **[`templates/`](/templates/)**  
+  Wiederverwendbare Muster und Arbeitsmittel für die Praxis, etwa Checklisten, Matrizen, Musteranschreiben, Fragenkataloge und Textbausteine.
 
-Daraus ergibt sich die folgende - nach und nach befüllte - Struktur:
+- **[`guides/`](/guides/)**  
+  Anleitungen zur Nutzung des Repositorys und zur Einbindung der Bausteine in unterschiedliche Systeme und Arbeitsabläufe.
+
+- **[`evals/`](/evals/)**  
+  Plattformneutrale Testfälle zur strukturierten Prüfung von Prompts, Custom GPTs, Skills und anderen KI-Assistenten. Testakten trennen regelmäßig zwischen Input-Material, Testprompts, internem Erwartungshorizont und dokumentierten Ergebnissen.
+
+- **`tooling/` (perspektivisch)**  
+  Künftiger Bereich für Software, Plugins, Skripte, Prüfwerkzeuge und andere ausführbare Artefakte. Solche Inhalte werden getrennt lizenziert.
+
+- **[`LICENSES/`](/LICENSES/) und [`POLICIES/`](/POLICIES/)**  
+  Lizenztexte, SPDX-Regeln und weitere projektweite Vorgaben. Maßgeblich sind die Lizenzhinweise in der jeweiligen Datei.
+
+> Markdown-Dateien sollen grundsätzlich mit YAML-Frontmatter und einem SPDX-Kommentar versehen werden. Dadurch bleiben Lizenzzuordnung, Rechtekette, fachliche Einordnung und Verwendungszweck auch bei Kopie oder Weitergabe nachvollziehbar.
+
+Die derzeitige Struktur stellt sich vereinfacht wie folgt dar:
 
 ```text
 /
 ├─ prompts/
+│  └─ markterkundung/
+│     └─ it-beschaffung/
+│        ├─ 01_hinweistext_systemprompt_markterkundung_chatgpt_customgpt_de.md
+│        └─ README.md
+│
+├─ wissen/
 │  ├─ markterkundung/
-│  │  └─ it-beschaffung
-│  │     └─ 01_hinweistext_systemprompt_markterkundung_chatgpt_customgpt_de.md
-│  │     └─ README.md
-│  │  └─ ...
-│  └─ weitere_module/...
+│  │  ├─ 01_leitfaden_markterkundung_de.md
+│  │  └─ 02_typische_fehler_markterkundung_de.md
+│  └─ README.md
+│
+├─ templates/
+│  └─ markterkundung/
+│     └─ it-beschaffung/
+│        └─ 01_anschreiben_und_fragenkatalog_de.md
 │
 ├─ guides/
 │  ├─ 00_github_basics_de.md
 │  ├─ 01_lizenz_faq_de.md
 │  └─ ...
 │
-├─ templates/
-│  ├─ markterkundung
-│  │  └─ it-beschaffung
-│  │     └─ 01_anschreiben_und_fragenkatalog_de.md
-│  └─ ...
-│
-├─ wissen/
-│  ├─ markterkundung
-│  │  ├─ 01_leitfaden_markterkundung_de.md
-|  |  ├─ 02_typische_fehler_markterkundung_de.md
-|  |  └─ ...
-│  └─ README.md
+├─ evals/
+│  └─ markterkundung/
+│     └─ it-beschaffung/
+│        └─ M-IT-01/
+│           ├─ README.md
+│           ├─ input/
+│           │  └─ Aktenstücke 01–09
+│           ├─ prompts/
+│           │  └─ Testprompts 01–05
+│           ├─ expected/
+│           │  └─ Aktenstücke 10–13
+│           └─ results/
 │
 ├─ LICENSES/
-│  ├─ EUPL-1.2.txt
-│  └─ CC-BY-4.0.txt
+│  ├─ CC-BY-4.0.txt
+│  └─ EUPL-1.2.txt
+│
+├─ POLICIES/
+│  └─ SPDX.md
 │
 ├─ CONTRIBUTING.md
 ├─ DCO.md
-├─ POLICIES/
-│  └─ SPDX.md
+├─ index.html
 └─ README.md
 ```
+> **Experimentelle Leseschnittstelle**
+> Unter api.vergabelab.de werden ausgewählte öffentliche Inhalte des Repositorys über eine statische Leseschnittstelle bereitgestellt. Die Schnittstelle befindet sich in einer experimentellen Phase. Sie ist derzeit keine (versionierte) Produkt-API; Inhalte, Pfade, Umfang und technische Struktur können sich jederzeit ändern. Es besteht kein Anspruch auf dauerhafte Verfügbarkeit oder Abwärtskompatibilität.
+
 ---
 
 ## 4. Wie kann ich beitragen?
@@ -237,7 +317,7 @@ Du fühlst dich sicher im Umgang mit GitHub? Dann freuen wir uns über direkte V
 ---
 
 ## 5. Lizenzierung
-Dieses Repository enthält überwiegend Textartefakte (Systemprompts/Hinweistexte, Templates, Guides, Muster, Wissensbausteine). Um die Nutzung in Vergabestellen und bei Partnern möglichst reibungsarm zu halten, sind Textartefakte grundsätzlich unter CC BY 4.0 lizenziert. Echte Software-/Tooling-Bestandteile (Code) werden – sofern vorhanden – separat behandelt.
+Dieses Repository enthält überwiegend Textartefakte, insbesondere Systemprompts und Hinweistexte, Templates, Guides, Muster, Wissensbausteine und Evaluationsmaterialien. Um die Nutzung in Vergabestellen und bei Partnern möglichst reibungsarm zu halten, sind Textartefakte grundsätzlich unter CC BY 4.0 lizenziert. Echte Software-/Tooling-Bestandteile (Code) werden – sofern vorhanden – separat behandelt.
 
 ### 5.1 Lizenz-Matrix (Ordner / typische Inhalte → Lizenz → Pflichten)
 
@@ -247,6 +327,7 @@ Dieses Repository enthält überwiegend Textartefakte (Systemprompts/Hinweistext
 | wissen/** | Leitfäden, Grundlagen, Wissensbausteine, fachliche Referenzmaterialien | CC BY 4.0 | Attribution + Hinweis auf Änderungen |
 | templates/** | Mustertexte, Vorlagen, Prüfschemata, Textbausteine | CC BY 4.0 | Attribution + Hinweis auf Änderungen |
 | guides/** | Handreichungen, Anleitungen, Einbindungshinweise | CC BY 4.0 | Attribution + Hinweis auf Änderungen |
+| evals/** | Fiktive Testakten, Testprompts, Erwartungshorizonte, Bewertungsraster und Auswertungshinweise | CC BY 4.0 | Attribution + Hinweis auf Änderungen |
 | tooling/** (sofern vorhanden) | Code/Plugins/Skripte/Tools | EUPL 1.2 | Lizenz-/Copyright-Hinweise beibehalten; Bedingungen der EUPL 1.2 beachten |
 
 **Vorrang von Datei-Hinweisen:** 
