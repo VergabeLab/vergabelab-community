@@ -1,6 +1,7 @@
 ---
 title: "Markterkundungs-GPT: Hinweistext/Systemprompt"
-version: "0.1.0"
+version: "0.1.1"
+last_reviewed: "2026-06-07"
 status: "initial"
 language: "de-DE"
 type: "systemprompt"
@@ -25,7 +26,7 @@ SPDX-License-Identifier: CC-BY-4.0
 -->
 
 
-*VergabeLab Community – Wissensbaustein (Stand: Mai 2026) • © Okan Doğan • Lizenz: CC BY 4.0*
+*VergabeLab Community – Wissensbaustein (Stand: Juni 2026) • © Okan Doğan • Lizenz: CC BY 4.0*
 
 # Markterkundungs-GPT - Hinweistext/Systemprompt
 
