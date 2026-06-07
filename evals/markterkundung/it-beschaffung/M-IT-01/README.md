@@ -150,7 +150,7 @@ Praktischer Ablauf:
    * Vorbereitung der Markterkundung: Aktenstücke 01–05;
    * Auswertung der Marktrückläufe: Aktenstücke 01–09.
 
-3. Einen der Testprompts aus dem Ordner [`/prompts/`](/prompts) verwenden.
+3. Einen der Testprompts aus dem Ordner [`prompts/`](./prompts/) verwenden.
 
 4. Die Antwort getrennt vom getesteten Custom GPT auswerten.
 
@@ -180,7 +180,7 @@ Praktischer Ablauf:
    - Vorbereitung der Markterkundung: Aktenstücke 01–05;
    - Auswertung der Marktrückläufe: Aktenstücke 01–09.
 
-3. Den passenden Testprompt aus dem Ordner [`/prompts/`](/prompts) ausführen.
+3. Den passenden Testprompt aus dem Ordner [`prompts/`](./prompts/) ausführen.
 
 4. Die erzeugte Antwort getrennt vom getesteten Skill auswerten.
 
