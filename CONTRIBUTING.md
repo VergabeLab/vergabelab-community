@@ -1,6 +1,7 @@
 ---
 title: "Beitrag zur VergabeLab Community"
-version: "0.1.0"
+version: "0.1.1"
+last_reviewed: "2026-06-10"
 status: "initial"
 language: "de-DE"
 type: "policy"
@@ -136,8 +137,10 @@ SPDX-License-Identifier: CC-BY-4.0
 -->
 ```
 
+Bei modulgebundenen Dateien ist zusätzlich die Modulzuordnung nach [POLICIES/SPDX.md](POLICIES/SPDX.md) zu beachten; insbesondere kann dort ein `module_id` erforderlich sein.
+
 Grundsatz: Im Header steht der tatsächliche Rechteinhaber/Autor (bei Co-Authoring mehrere Zeilen). Durch das Einreichen eines Beitrags erfolgt keine automatische Rechteübertragung; es gelten die Nutzungsrechte nach der jeweiligen Lizenz in der Datei.
 
-Details und Beispiele: siehe [`POLICIES/SPDX.md`](/POLICIES/SPDX.md)
+Details und Beispiele: siehe [`POLICIES/SPDX.md`](POLICIES/SPDX.md)
 
 **Danke für deinen Beitrag!**
