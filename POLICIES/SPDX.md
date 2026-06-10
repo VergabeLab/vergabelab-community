@@ -1,6 +1,7 @@
 ---
 title: "SPDX- und Metadaten-Policy"
-version: "0.1.0"
+version: "0.2.0"
+last_reviewed: "2026-06-10"
 status: "initial"
 language: "de-DE"
 type: "policy"
@@ -80,6 +81,43 @@ SPDX-FileCopyrightText: 2026 Vorname Nachname
 SPDX-License-Identifier: EUPL-1.2
 -->
 ```
+
+### Modulgebundene Dateien
+
+Modulgebundene Dateien sollen zusätzlich eine eindeutige Modulzuordnung erhalten:
+
+```yaml
+module_id: "markterkundung-it-beschaffung"
+```
+
+Die Felder `module_id`, `module` und `procurement_area` sind YAML-Frontmatter-Felder. Sie ersetzen den SPDX-Kommentar nicht.
+
+Der Wert wird in `lowercase-kebab-case` geführt. Das Feld dient der eindeutigen Zuordnung fachlich zusammengehöriger Dateien und soll für modulgebundene Prompts, Wissensbausteine, Templates, Evaluationen und spätere Skill-Begleitdateien verwendet werden.
+
+Für `SKILL.md` gilt der unten beschriebene Sonderstandard. Für allgemeine oder modulübergreifende Dateien ist `module_id` nicht erforderlich.
+
+`module_id` ist nicht mit dem Dateipfad oder `repository_area` gleichzusetzen.
+
+Beispiel:
+
+```yaml
+module_id: "markterkundung-it-beschaffung"
+module: "markterkundung"
+procurement_area: "it-beschaffung"
+```
+
+### Beschaffungsbereich
+
+Der konkrete Beschaffungsbereich soll einheitlich mit `procurement_area` angegeben werden:
+
+```yaml
+procurement_area: "it-beschaffung"
+```
+
+Das bislang teilweise verwendete Feld `domain` soll künftig nicht synonym zu `procurement_area` verwendet werden.
+
+In diesem Schritt werden noch keine bestehenden Fachdateien angepasst.
+
 ---
 
 ## 3. Verhältnis von YAML und SPDX-Kommentar
@@ -91,11 +129,12 @@ Der SPDX-Kommentar dient als klarer, dateibezogener Lizenz- und Rechtehinweis.
 Wenn YAML-Metadaten und SPDX-Kommentar ausnahmsweise voneinander abweichen, ist die Abweichung vor dem Merge zu klären. Die Datei soll erst übernommen werden, wenn Lizenz und Rechteinhaberschaft eindeutig sind.
 
 ---
+
 ## 4. Pflichtangaben
 
 Jede Markdown-Datei soll mindestens folgende YAML-Felder enthalten:
 
-```md
+```yaml
 title: "..."
 version: "0.1.0"
 status: "initial"
@@ -115,18 +154,21 @@ SPDX-FileCopyrightText: <Jahr(e)> <Name des Rechteinhabers>
 SPDX-License-Identifier: <Lizenz-ID>
 -->
 ```
+
 Zulässige Lizenz-IDs im Projekt sind insbesondere:
 
 ```md
 CC-BY-4.0
 EUPL-1.2
 ```
+
 ---
+
 ## 5. Typische Dateitypen
 
-Für ```type``` sollen nach Möglichkeit einheitliche Werte verwendet werden:
+Für `type` sollen nach Möglichkeit einheitliche Werte verwendet werden:
 
-```md
+```yaml
 type: "root-readme"
 type: "folder-readme"
 type: "module-readme"
@@ -136,27 +178,122 @@ type: "knowledge"
 type: "systemprompt"
 type: "policy"
 type: "tooling"
+type: "eval"
+type: "eval-result"
 ```
+
 Beispiele:
-```md
+
+```yaml
 type: "guide"
 repository_area: "guides"
 ```
 
-```md
+```yaml
 type: "template"
 repository_area: "templates/markterkundung/it-beschaffung"
 ```
 
-```md
+```yaml
 type: "knowledge"
 repository_area: "wissen/markterkundung"
 ```
 
-```md
+```yaml
 type: "systemprompt"
 repository_area: "prompts/markterkundung/it-beschaffung"
 ```
+
+### Sonderfall `SKILL.md`
+
+Eine portable Agent-Skill-Datei heißt `SKILL.md`. Sie verwendet ein mit der Agent-Skills-Spezifikation kompatibles YAML-Frontmatter.
+
+Nach der allgemeinen Agent-Skills-Spezifikation sind mindestens folgende Top-Level-Felder erforderlich:
+
+```yaml
+name: "markterkundung-it-beschaffung"
+description: "..."
+```
+
+VergabeLab legt ergänzend strengere projektinterne Pflichtangaben fest. Für jede VergabeLab-`SKILL.md` sind zusätzlich verpflichtend:
+
+```yaml
+license: "CC-BY-4.0"
+metadata:
+  author: "Okan Doğan"
+  project: "VergabeLab Community"
+  version: "0.1.0"
+  vergabelab-status: "draft"
+  vergabelab-language: "de-DE"
+  vergabelab-module: "markterkundung"
+  vergabelab-procurement-area: "it-beschaffung"
+```
+
+`author` bezeichnet die tatsächliche Person oder Organisation, die den Skill verfasst hat. Für den derzeitigen Stand ist dies `Okan Doğan`.
+
+`project` bezeichnet die Zuordnung zum Projekt `VergabeLab Community`.
+
+`version` bezeichnet die Version des konkreten Skills.
+
+`vergabelab-status` beschreibt den Reife- beziehungsweise Bearbeitungsstand.
+
+`vergabelab-language` bezeichnet die Inhaltssprache.
+
+`vergabelab-module` bezeichnet den fachlichen Modulbereich.
+
+`vergabelab-procurement-area` bezeichnet den konkreten Beschaffungsbereich.
+
+Sämtliche Werte innerhalb von `metadata` werden als Strings geführt.
+
+Der Wert von `name` muss dem Namen des übergeordneten Skill-Ordners entsprechen.
+
+Zusätzliche VergabeLab-Felder wie `title`, `type`, `repository_area`, `skill_id` oder `skill_version` sollen nicht als eigene Top-Level-Felder in `SKILL.md` verwendet werden.
+
+Das Feld `compatibility` bleibt optional und soll nur verwendet werden, wenn der Skill tatsächliche technische oder umgebungsbezogene Voraussetzungen besitzt, zum Beispiel:
+
+```yaml
+compatibility: "Erfordert Zugriff auf lokale Markdown-Referenzen."
+```
+
+Bei reinen Textskills ohne besondere technische Anforderungen soll `compatibility` entfallen.
+
+Vollständiges Beispiel:
+
+```yaml
+---
+name: "markterkundung-it-beschaffung"
+description: "Unterstützt bei der Vorbereitung, Durchführung, Auswertung und Dokumentation von Markterkundungen bei öffentlichen IT-Beschaffungen."
+license: "CC-BY-4.0"
+metadata:
+  author: "Okan Doğan"
+  project: "VergabeLab Community"
+  version: "0.1.0"
+  vergabelab-status: "draft"
+  vergabelab-language: "de-DE"
+  vergabelab-module: "markterkundung"
+  vergabelab-procurement-area: "it-beschaffung"
+---
+```
+
+`SKILL.md` enthält im VergabeLab-Kontext textliche Skill-Anweisungen, Metadaten und Verweise. Diese Datei wird daher als Text-/Wissensartefakt behandelt.
+
+Ausführbare Software- oder Tooling-Bestandteile innerhalb oder außerhalb eines Skill-Pakets sind gesondert zu kennzeichnen und nach der jeweils vorgesehenen Softwarelizenz zu führen.
+
+Unmittelbar nach dem YAML-Frontmatter soll ein SPDX-Kommentar stehen:
+
+```html
+<!--
+SPDX-FileCopyrightText: 2026 Okan Doğan
+SPDX-License-Identifier: CC-BY-4.0
+-->
+```
+
+`author` und `SPDX-FileCopyrightText` erfüllen unterschiedliche Funktionen. `author` dient als beschreibende und in der GitHub-Vorschau sichtbare Metadatenangabe. Der SPDX-Kommentar dient als formalisierter dateibezogener Rechte- und Lizenzhinweis.
+
+Beide Angaben müssen die tatsächliche Urheberschaft beziehungsweise Rechteinhaberschaft korrekt abbilden. Bei mehreren substantiell Beitragenden sind die bestehenden Regeln aus dieser Policy entsprechend anzuwenden.
+
+Für andere Markdown-Dateien innerhalb eines späteren Skill-Bereichs gilt weiterhin der allgemeine VergabeLab-Metadatenstandard.
+
 ---
 
 ## 6. Wer steht im Copyright?
@@ -200,20 +337,25 @@ SPDX-License-Identifier: CC-BY-4.0
 -->
 ```
 Im YAML-Frontmatter kann dies entsprechend als Textwert abgebildet werden:
-```md
+
+```yaml
 spdx_file_copyright_text: "2026 Okan Doğan; 2026 Vorname Nachname"
 ```
+
 Alternativ kann bei künftiger technischer Auswertung eine Listenstruktur verwendet werden:
-```md
+
+```yaml
 spdx_file_copyright_text:
   - "2026 Okan Doğan"
   - "2026 Vorname Nachname"
 ```
+
 Für den aktuellen Stand genügt ein einheitlicher Textwert. Wichtig ist, dass YAML und SPDX-Kommentar inhaltlich nicht widersprüchlich sind.
 
 Bestehende Copyright-Zeilen dürfen nicht ohne Klärung entfernt werden.
 
 ---
+
 ## 7. Bearbeitungen
 
 Bei bloßen redaktionellen Korrekturen muss nicht zwingend eine neue Copyright-Zeile ergänzt werden.
@@ -231,11 +373,13 @@ SPDX-License-Identifier: CC-BY-4.0
 ```
 
 ---
+
 ## 8. Keine exklusive Rechteübertragung
 
 Durch das Einreichen eines Beitrags werden keine exklusiven Rechte an den Projektträger übertragen. Beiträge folgen dem Prinzip „Inbound = Outbound“: Ein Beitrag wird unter der Lizenz des betroffenen Ordners bzw. der betroffenen Datei veröffentlicht.
 
 ---
+
 ## 9. Zusicherung der Beitragenden
 
 Mit jedem Beitrag bestätigen Beitragende, dass sie:
@@ -249,7 +393,8 @@ Mit jedem Beitrag bestätigen Beitragende, dass sie:
 Pull Requests müssen per DCO signiert werden.
 
 ---
-##10. Quellenhinweise
+
+## 10. Quellenhinweise
 
 Wenn Inhalte auf externen Quellen beruhen, sind diese Quellen transparent anzugeben.
 
@@ -260,6 +405,7 @@ Bei bloßer fachlicher Auswertung, Zusammenfassung oder Einordnung genügt regel
 
 - [Titel der Quelle], [Autor/Herausgeber], [URL], abgerufen am [Datum]. Nutzung: fachliche Auswertung/Zusammenfassung/Zitat, keine Übernahme fremder Textpassagen.
 ```
+
 Bei Übernahme, Bearbeitung oder Übersetzung fremder Inhalte müssen zusätzlich Rechte- und Lizenzstatus geprüft und angegeben werden.
 
 Beispiel:
@@ -272,11 +418,12 @@ Beispiel:
 Fremde Inhalte dürfen nicht ohne passende Nutzungsrechte unter die VergabeLab-Lizenz gestellt werden.
 
 ---
+
 ## 11. Quellenangaben in YAML
 
 Zusätzlich zum sichtbaren Quellenabschnitt können Quellen auch im YAML-Frontmatter erfasst werden:
 
-```md
+```yaml
 sources:
   - title: "Titel der Quelle"
     url: "https://..."
@@ -284,9 +431,11 @@ sources:
     accessed: "2026-05-16"
     usage: "fachliche Auswertung/Zusammenfassung/Zitat, keine Textübernahme"
 ```
+
 Die sichtbare Quellenangabe im Dokument bleibt bei Wissensbausteinen empfohlen, weil sie für Nutzerinnen und Nutzer unmittelbar nachvollziehbar ist.
 
 ---
+
 ## 12. Konfliktfall / Korrektur
 
 Wenn Metadaten, SPDX-Kommentar, Lizenzangaben oder Quellenhinweise erkennbar fehlerhaft oder unklar sind, wird der Beitrag vor dem Merge korrigiert oder zurückgestellt, bis die Rechte- und Lizenzlage geklärt ist.
@@ -300,3 +449,13 @@ Typische Klärungsfälle:
 - personenbezogene Daten,
 - Vergabeinterna,
 - widersprüchliche YAML- und SPDX-Angaben.
+
+---
+
+## 13. Portabilität und kanonische Quellen
+
+Inhalte sollen möglichst nicht manuell an mehreren Stellen parallel gepflegt werden.
+
+Kanonische Quellen im Repository und daraus erzeugte portable Pakete können getrennt behandelt werden.
+
+Konkrete Packaging-, Release- oder Build-Regeln sind noch nicht Gegenstand dieser Policy.
