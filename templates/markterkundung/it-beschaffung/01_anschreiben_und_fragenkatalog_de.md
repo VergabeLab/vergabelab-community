@@ -49,7 +49,7 @@ Markterkundung (z. B. § 28 VgV) ist **Informationsgewinnung**. Kritisch wird 
 
 ### Vor diesem Hintergrund ist das folgende Ampelsystem (Faustregeln) zu verstehen:
 **Grün (typisch unkritisch):**
-- Abfrage von **Standardfunktionen**, Integrationen, Betriebsmodellen, Liefer-/Bereitstellungszeiten, Preismodellen (Spannen//Staffeln/Annahmen), Referenzen.
+- Abfrage von **Standardfunktionen**, Integrationen, Betriebsmodellen, Liefer-/Bereitstellungszeiten, Preismodellen (Spannen/Staffeln/Annahmen), Referenzen.
 - Antworten über **Matrix** (Muss/Soll + Ja/Nein/Roadmap) und Verweise auf **öffentliche Dokumentation**.
 - Identische Fragen/Fristen an alle; kurze Q&A‑Termine nur zur Klärung der schriftlichen Antworten.
 
@@ -234,7 +234,7 @@ Die Originalvorlage nutzte „sofortige Umsetzung möglich / perspektivisch mög
 
 ## 5. Vertiefungsdialog (optional, mit Schutzmaßnahmen), wenn erste Stufe der Markterkundung nicht reicht
 
-Wenn nach Auswertung der Antworten auf die erste Stufe der Markterkundung (RFI) wesentliche Unklarheiten bleiben (z. B. Integrationsgrenzen, Betriebsmodelle, Exit‑Prozesse), kann ein optionaler **Vertiefungsdialog** sinnvoll sein. Damit er nicht in die § 7 vgV-Vorbefassung mündet, gelten folgende Mindestschutzmaßnahmen:
+Wenn nach Auswertung der Antworten auf die erste Stufe der Markterkundung (RFI) wesentliche Unklarheiten bleiben (z. B. Integrationsgrenzen, Betriebsmodelle, Exit‑Prozesse), kann ein optionaler **Vertiefungsdialog** sinnvoll sein. Damit er nicht in die § 7 VgV-Vorbefassung mündet, gelten folgende Mindestschutzmaßnahmen:
 
 1. **Standardisierte Agenda + identische Fragen:** gleicher Zeitrahmen, gleiche Themenblöcke für alle Teilnehmer.  
 2. **Kein Co‑Design:** keine gemeinsamen Entwürfe von Leistungsbeschreibung, Bewertungsmatrix oder Vertragsunterlagen; keine „Formulierungsaufträge“ an Anbieter.  
