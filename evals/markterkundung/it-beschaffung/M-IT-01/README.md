@@ -1,6 +1,7 @@
 ---
 title: "README – Fiktive Testakte M-IT-01 Markterkundung IT-Beschaffung"
 version: "0.1.0"
+last_reviewed: "2026-06-11"
 status: "initial"
 language: "de-DE"
 type: "eval"
@@ -13,8 +14,9 @@ data_notice: "vollständig fiktiv; keine echten Personen, Orte, Vergabestellen o
 license: "CC-BY-4.0"
 repository_area: "evals/markterkundung/it-beschaffung/M-IT-01"
 
+module_id: "markterkundung-it-beschaffung"
 module: "markterkundung"
-domain: "it-beschaffung"
+procurement_area: "it-beschaffung"
 
 related_skill: "agent-skills/markterkundung-it-beschaffung"
 related_custom_gpt_prompt: "prompts/markterkundung/it-beschaffung/01_hinweistext_systemprompt_markterkundung_chatgpt_customgpt_de.md"

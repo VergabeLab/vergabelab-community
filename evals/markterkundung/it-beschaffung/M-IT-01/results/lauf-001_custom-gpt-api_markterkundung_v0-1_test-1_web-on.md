@@ -1,6 +1,7 @@
 ---
 title: "Testlauf M-IT-01 – Custom GPT API – Test 1 – Websuche aktiviert"
 version: "0.1.0"
+last_reviewed: "2026-06-11"
 status: "completed"
 language: "de-DE"
 type: "eval-result"
@@ -35,6 +36,10 @@ score_classification: "sehr gut"
 data_notice: "vollständig fiktiv; keine echten Personen, Orte, Vergabestellen oder Anbieter"
 license: "CC-BY-4.0"
 repository_area: "evals/markterkundung/it-beschaffung/M-IT-01/results"
+
+module_id: "markterkundung-it-beschaffung"
+module: "markterkundung"
+procurement_area: "it-beschaffung"
 
 spdx_file_copyright_text: "2026 Okan Doğan"
 spdx_license_identifier: "CC-BY-4.0"

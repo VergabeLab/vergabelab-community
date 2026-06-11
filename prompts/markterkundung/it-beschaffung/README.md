@@ -1,11 +1,13 @@
 ---
 title: "README – Markterkundung IT-Beschaffung"
 version: "0.1.0"
+last_reviewed: "2026-06-11"
 status: "initial"
 language: "de-DE"
 type: "module-readme"
 license: "CC-BY-4.0"
 repository_area: "prompts/markterkundung/it-beschaffung"
+module_id: "markterkundung-it-beschaffung"
 module: "markterkundung"
 procurement_area: "it-beschaffung"
 spdx_file_copyright_text: "2026 Okan Doğan"

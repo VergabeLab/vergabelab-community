@@ -1,13 +1,15 @@
 ---
 title: "Markterkundungs-GPT: Hinweistext/Systemprompt"
 version: "0.1.1"
-last_reviewed: "2026-06-07"
+last_reviewed: "2026-06-11"
 status: "initial"
 language: "de-DE"
 type: "systemprompt"
 license: "CC-BY-4.0"
 repository_area: "prompts/markterkundung"
+module_id: "markterkundung-it-beschaffung"
 module: "markterkundung"
+procurement_area: "it-beschaffung"
 spdx_file_copyright_text: "2026 Okan Doğan"
 spdx_license_identifier: "CC-BY-4.0"
 intended_use:

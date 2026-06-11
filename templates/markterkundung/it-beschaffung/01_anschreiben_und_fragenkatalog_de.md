@@ -1,6 +1,7 @@
 ---
 title: "Markterkundung (IT-Beschaffung): Anschreiben und Fragenkatalog"
 version: "0.1.0"
+last_reviewed: "2026-06-11"
 status: "initial"
 language: "de-DE"
 type: "template"
@@ -8,6 +9,7 @@ license: "CC-BY-4.0"
 repository_area: "templates/markterkundung/it-beschaffung"
 spdx_file_copyright_text: "2026 Okan Doğan"
 spdx_license_identifier: "CC-BY-4.0"
+module_id: "markterkundung-it-beschaffung"
 module: "markterkundung"
 procurement_area: "it-beschaffung"
 target_audience:
