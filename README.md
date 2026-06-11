@@ -202,6 +202,8 @@ Software- und Tooling-Bestandteile werden, sobald sie hinzukommen, getrennt von 
 - **[`guides/`](/guides/)**  
   Anleitungen zur Nutzung des Repositorys und zur Einbindung der Bausteine in unterschiedliche Systeme und Arbeitsabläufe.
 
+  Weitere Hinweise dazu, wie einzelne Bausteine zu fachlichen Modulen zusammengefasst werden, finden sich im Guide [Modulstruktur in der VergabeLab Community](guides/02_modulstruktur_de.md).
+
 - **[`evals/`](/evals/)**  
   Plattformneutrale Testfälle zur strukturierten Prüfung von Prompts, Custom GPTs, Skills und anderen KI-Assistenten. Testakten trennen regelmäßig zwischen Input-Material, Testprompts, internem Erwartungshorizont und dokumentierten Ergebnissen.
 

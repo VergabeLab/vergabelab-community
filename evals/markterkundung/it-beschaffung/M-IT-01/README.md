@@ -18,7 +18,6 @@ module_id: "markterkundung-it-beschaffung"
 module: "markterkundung"
 procurement_area: "it-beschaffung"
 
-related_skill: "agent-skills/markterkundung-it-beschaffung"
 related_custom_gpt_prompt: "prompts/markterkundung/it-beschaffung/01_hinweistext_systemprompt_markterkundung_chatgpt_customgpt_de.md"
 
 target_systems:
@@ -237,10 +236,9 @@ evals/
           .gitkeep
 ```
 
-Die Testakte wird **bewusst** nicht unter `agent-skills/` abgelegt, weil sie nicht nur einen Claude Skill betrifft. Sie ist ein plattformneutraler Evaluationsfall. Der Bezug zu konkreten Implementierungen kann über Metadaten hergestellt werden, zum Beispiel:
+Die Testakte ist ein plattformneutraler Evaluationsfall. Der Bezug zu konkreten Implementierungen kann über Metadaten hergestellt werden, zum Beispiel:
 
 ```yaml
-related_skill: "agent-skills/markterkundung-it-beschaffung"
 related_custom_gpt_prompt: "prompts/markterkundung/it-beschaffung/01_hinweistext_systemprompt_markterkundung_chatgpt_customgpt_de.md"
 target_systems:
   - "chatgpt-custom-gpt"

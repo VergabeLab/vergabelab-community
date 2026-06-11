@@ -19,7 +19,6 @@ module_id: "markterkundung-it-beschaffung"
 module: "markterkundung"
 procurement_area: "it-beschaffung"
 
-related_skill: "agent-skills/markterkundung-it-beschaffung"
 related_custom_gpt_prompt: "prompts/markterkundung/it-beschaffung/01_hinweistext_systemprompt_markterkundung_chatgpt_customgpt_de.md"
 
 target_systems:
