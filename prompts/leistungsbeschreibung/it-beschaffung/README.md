@@ -31,14 +31,16 @@ SPDX-License-Identifier: CC-BY-4.0
 
 # Leistungsbeschreibung IT-Beschaffung
 
-Dieser Ordner soll künftig Prompt- und Hinweistext-Bausteine für KI-gestützte Unterstützung bei Leistungsbeschreibungen im Bereich IT-Beschaffung enthalten.
+Dieser Ordner enthält Prompt- und Hinweistext-Bausteine für KI-gestützte Unterstützung bei Leistungsbeschreibungen im Bereich IT-Beschaffung enthalten.
 
 Die Bausteine sollen Vergabestellen insbesondere bei Strukturierung, Vollständigkeitsprüfung und neutraler Formulierung unterstützen. Inhaltliche Schwerpunkte können technische und funktionale Anforderungen, Schnittstellen, Datenschutz, IT-Sicherheit, Betrieb, Migration, Service-Level sowie Lizenz- und Nutzungsmodelle sein.
 
 Die Nutzung der Bausteine ersetzt keine Prüfung durch die verantwortlichen Personen. Sie dient nicht der automatisierten Vergabeentscheidung, nicht der Rechtsberatung im Einzelfall und nicht der ungeprüften Übernahme von KI-Ergebnissen.
 
-## Geplante Inhalte
+## Dateien in diesem Ordner
 
-Konkrete Prompt-Dateien werden in einem späteren Pull Request ergänzt.
+| Datei | Zweck | Einsatz |
+|---|---|---|
+| `01_hinweistext_systemprompt_leistungsbeschreibung_it_de.md` | Hinweistext/Systemprompt für einen Assistenten zur Unterstützung bei Leistungsbeschreibungen im Bereich IT-Beschaffung | ChatGPT Custom GPT / vergleichbare LLM-Assistenten |
 
-In diesem Ordner werden vorerst keine Platzhalterdateien angelegt.
+Weitere Prompt-Varianten können später ergänzt werden.
