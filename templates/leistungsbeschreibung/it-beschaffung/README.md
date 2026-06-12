@@ -1,7 +1,7 @@
 ---
 title: "README – Templates Leistungsbeschreibung IT-Beschaffung"
 version: "0.1.0"
-last_reviewed: "2026-06-11"
+last_reviewed: "2026-06-12"
 status: "initial"
 language: "de-DE"
 type: "module-readme"
@@ -31,10 +31,14 @@ SPDX-License-Identifier: CC-BY-4.0
 
 # Templates Leistungsbeschreibung IT-Beschaffung
 
-Dieser Ordner soll künftig Vorlagen und Arbeitsmittel für Leistungsbeschreibungen im Bereich IT-Beschaffung enthalten.
+Dieser Ordner enthält Vorlagen und Arbeitsmittel für Leistungsbeschreibungen im Bereich IT-Beschaffung.
 
-Geplante Inhalte können insbesondere allgemeine Gliederungshilfen, Anforderungstabellen, Checklisten, Strukturbausteine für funktionale und technische Anforderungen sowie Dokumentationshinweise sein.
+Weitere Inhalte können insbesondere allgemeine Gliederungshilfen, Anforderungstabellen, Checklisten, Strukturbausteine für funktionale und technische Anforderungen sowie Dokumentationshinweise sein.
 
-Konkrete Templates werden später ergänzt. In dieser README werden keine Leistungsanforderungen entworfen.
+## Dateien in diesem Ordner
 
-In diesem Ordner wird vorerst keine Template-Datei angelegt.
+| Datei | Zweck | Einsatz |
+|---|---|---|
+| `01_vorlage_leistungsbeschreibung_it_de.md` | Arbeitsvorlage für die strukturierte Erstellung von Leistungsbeschreibungen im Bereich IT-Beschaffung | Erstellung und Prüfung von IT-Leistungsbeschreibungen |
+
+Weitere Template-Varianten können später ergänzt werden.
