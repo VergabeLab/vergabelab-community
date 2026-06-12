@@ -31,7 +31,7 @@ SPDX-License-Identifier: CC-BY-4.0
 
 # Leistungsbeschreibung IT-Beschaffung
 
-Dieser Ordner enthält Prompt- und Hinweistext-Bausteine für KI-gestützte Unterstützung bei Leistungsbeschreibungen im Bereich IT-Beschaffung enthalten.
+Dieser Ordner enthält Prompt- und Hinweistext-Bausteine für KI-gestützte Unterstützung bei Leistungsbeschreibungen im Bereich IT-Beschaffung.
 
 Die Bausteine sollen Vergabestellen insbesondere bei Strukturierung, Vollständigkeitsprüfung und neutraler Formulierung unterstützen. Inhaltliche Schwerpunkte können technische und funktionale Anforderungen, Schnittstellen, Datenschutz, IT-Sicherheit, Betrieb, Migration, Service-Level sowie Lizenz- und Nutzungsmodelle sein.
 
