@@ -1,7 +1,7 @@
 ---
 title: "README – Leistungsbeschreibung IT-Beschaffung"
 version: "0.1.0"
-last_reviewed: "2026-06-11"
+last_reviewed: "2026-06-12"
 status: "initial"
 language: "de-DE"
 type: "module-readme"
